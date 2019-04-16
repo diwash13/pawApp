@@ -9,6 +9,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image } from 'react-native';
 import SearchForProvider from './src/SearchForProvider'
+import Login from './src/Login'
 
 
 const instructions = Platform.select({
@@ -22,12 +23,14 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
+
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to Paw!</Text>
-        <Image  source={require( "./img/dogs.png")} alt="dogs" />
-
+        <Image source={require("./img/dogs.png")} alt="dogs" />
+        <Login />
         <SearchForProvider />
       </View>
+
     );
   }
 }
